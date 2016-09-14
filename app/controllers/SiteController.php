@@ -1,7 +1,7 @@
 <?php
 
 namespace app\controllers;
-
+use yii\easyii\modules\carousel\models\Carousel;
 use yii\web\Controller;
 
 class SiteController extends Controller
@@ -17,6 +17,10 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+//        $documents = Carousel::find()->where(['status'=>'1', 'slider_type'=>'2'])->all();
+
+        return $this->render('index',[
+//            'documents'=>$documents,
+        ]);
     }
 }
